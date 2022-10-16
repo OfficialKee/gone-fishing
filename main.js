@@ -36,15 +36,22 @@ console.log(`\n====================================================`);
         
         }else if (action === 'c'){
             console.log('You chose to keep the fish')
+            console.log('\n=============================================')
             myFish.push(newFish)
             if(getTotalWeight(myFish) >= 10){
                 myFish.pop();
                 console.log('\nThat fish will place you over your limit of ten pounds, you have to throw it back.')
+                console.log('\n=============================================')
             }
+
         }
 
         
- }
+ }console.log(`\nIt's noon and you must return home.`)
+ console.log(`You have caught ${myFish.length} fish`)
+ for (let i=0; i< myFish.length; i++){
+    console.log(`${myFish[i].name}, ${myFish[i].weight} lbs, $${myFish[i].value} `)
+ }console.log(`\n Total Weight: ${getTotalWeight(myFish)}lbs \n Total Value: $${getTotalValue(myFish)}`)
 
 //     
 //     
