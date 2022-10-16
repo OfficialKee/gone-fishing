@@ -32,12 +32,17 @@ console.log(`\n====================================================`);
     let action = prompt('Your action: [c]atch or [r]elease:  ').toLowerCase()
 
       if( action === 'r'){
-        console.log('You chose to release the fish');
+        console.log('\nYou chose to release the fish');
         
         }else if (action === 'c'){
             console.log('You chose to keep the fish')
             myFish.push(newFish)
+            if(getTotalWeight(myFish) >= 10){
+                myFish.pop();
+                console.log('\nThat fish will place you over your limit of ten pounds, you have to throw it back.')
+            }
         }
+
         
  }
 
